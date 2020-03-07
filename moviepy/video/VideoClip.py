@@ -132,12 +132,12 @@ class VideoClip(Clip):
     @requires_duration
     @use_clip_fps_by_default
     @convert_masks_to_RGB
-    def write_videofile(self, filename, fps=None, codec=None,
+    def write_videofile(self, filename, fps=None, codec='libx264',
                         bitrate=None, audio=True, audio_fps=44100,
                         preset="medium",
-                        audio_nbytes=4, audio_codec=None,
+                        audio_nbytes=4, audio_codec='aac',
                         audio_bitrate=None, audio_bufsize=2000,
-                        temp_audiofile=None,
+                        temp_audiofile='temp-audio.m4a',
                         rewrite_audio=True, remove_temp=True,
                         write_logfile=False, verbose=True,
                         threads=None, ffmpeg_params=None,
